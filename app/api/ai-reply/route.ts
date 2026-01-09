@@ -8,8 +8,10 @@ interface ReplyRequest {
 
 // AI safety keywords to filter out inappropriate content
 const UNSAFE_KEYWORDS = [
-  'violence', 'hate', 'discriminat', 'harass', 'illegal', 
-  'explicit', 'offensive', 'threaten', 'abusive'
+  'violence', 'violent', 'harm', 'harmful', 'hurt',
+  'hate', 'hatred', 'discriminate', 'discrimination',
+  'harass', 'harassment', 'illegal', 'threat', 'threaten',
+  'explicit', 'offensive', 'abusive'
 ]
 
 function performSafetyCheck(text: string): { safe: boolean; reason?: string } {

@@ -19,11 +19,12 @@ export interface AIReplyResponse {
  */
 export function performContentSafetyCheck(content: string): { safe: boolean; reason?: string } {
   const unsafePatterns = [
-    /\b(violence|violent|harm|hurt)\b/i,
-    /\b(hate|hatred|discriminat)\b/i,
-    /\b(illegal|crime|criminal)\b/i,
-    /\b(explicit|sexual|nsfw)\b/i,
-    /\b(offensive|insult|derogatory)\b/i,
+    /\b(violence|violent|harm(ful)?|hurt(ing)?)\b/i,
+    /\b(hate(ful)?|hatred|discriminate|discrimination)\b/i,
+    /\b(illegal|crime|criminal|unlawful)\b/i,
+    /\b(explicit|sexual|nsfw|pornographic)\b/i,
+    /\b(offensive|insult(ing)?|derogatory|abusive)\b/i,
+    /\b(threat(en)?|intimidat(e|ion)|harass(ment)?)\b/i,
   ]
 
   for (const pattern of unsafePatterns) {
