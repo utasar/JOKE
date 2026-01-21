@@ -104,9 +104,6 @@ All AI features include stringent safety logic:
 - **Smooth Animations**: Framer Motion for delightful interactions
 - **Accessible**: High contrast and clear typography
 
-##  License
-
-This project is part of the utasar/JOKE repository.
 
 ##  Contributing
 
